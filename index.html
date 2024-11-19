@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 4rem;
+    color: #222;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #000000;
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+
+header {
+    background-color: #111;
+    padding: 40px 0;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 5px;
+    position: relative;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ec57b1;
+    color: #111;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ec57b1;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+
+#home {
+    background: linear-gradient(45deg, #ee5555, #e770ca, #3f0784);
+    background-size: 300% 300%;
+    animation: gradientAnimation 6s ease infinite;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#home h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#home p {
+    font-size: 1.4rem;
+    max-width: 750px;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    padding: 12px 30px;
+    background-color: #0399d5;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 87, 34, 0.3);
+}
+
+.btn:hover {
+    background-color: #ec57b1;
+    transform: translateY(-5px);
+}
+
+
+#about {
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+#about h2 {
+    color: #333333;
+}
+
+#about p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 20px auto;
+    color: #555;
+    line-height: 1.8;
+}
+
+
+#portfolio {
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+}
+
+#portofolio h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #333333;
+}
+
+.portofolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.portofolio-item {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portofolio-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.portofolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portofolio-item p {
+    padding: 20px;
+    font-size: 1.1rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.portofolio-item:hover p {
+    color: #4663f3;
+}
+
+.portofolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+#contact {
+    padding: 80px 20px;
+    background-color: #ec57b1;
+    color: white;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#contact p {
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+footer {
+    padding: 20px 0;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 3.5rem;
+    }
+
+    #home p {
+        font-size: 1.3rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .portofolio-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    #home h1 {
+        font-size: 2.8rem;
+    }
+
+    #home p {
+        font-size: 1.2rem;
+    }
+
+    .portofolio-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .portofolio-item {
+        height: 300px;
+    }
+}
+.hero-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.1);
+}
+
+
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portofolio">Portofolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <img src="gambar/foto.jpeg" alt="Foto Widya Yuliastuti" class="hero-image">
+            <h2>Selamat datang di Portofolio Saya</h2>
+            <h3>Widya Yuliastuti</h3>
+            <p>Menyediakan layanan desain web dan pengembangan aplikasi</p>
+            <a href="#contact" class="btn">Hubungi Saya</a>
+        </div>
+    </section>
+    
+
+    <section id="about">
+        <h2>About Me</h2>
+          <p>Halo! Saya <strong>Widya Yuliastuti</strong>, seorang mahasiswa berbakat di <strong>Institut Bisnis dan Teknologi Indonesia (INSTIKI)</strong>, tempat saya mengejar impian untuk menjadi ahli di bidang desain web dan pengembangan aplikasi. Dunia teknologi selalu memikat saya dengan potensinya yang tak terbatas, dan saya berkomitmen untuk menjadi bagian dari perubahan tersebut.</p>
+          <p>Dengan pengalaman lebih dari 3 tahun, saya telah bekerja pada berbagai proyek yang mencakup desain antarmuka, pengembangan aplikasi berbasis web, dan pembuatan pengalaman pengguna yang intuitif. Bagi saya, desain bukan hanya soal keindahan, tetapi juga bagaimana memberikan nilai nyata bagi pengguna.</p>
+          <p>Di INSTIKI, saya tidak hanya belajar tentang teknologi tetapi juga cara menggabungkannya dengan wawasan bisnis. Ini membantu saya memahami kebutuhan klien dengan lebih baik, sekaligus menciptakan solusi yang tidak hanya efektif tetapi juga strategis.</p>
+          <p>Di luar dunia teknologi, saya adalah individu yang percaya bahwa kreativitas dan inovasi datang dari mengeksplorasi banyak bidang. Saya gemar menggambar, menulis, dan menjelajahi dunia seni visual untuk mendapatkan inspirasi baru. Keseimbangan antara logika teknologi dan jiwa seni adalah kekuatan utama saya.</p>
+          <p>Saya bermimpi untuk tidak hanya menjadi desainer atau pengembang yang hebat tetapi juga seorang profesional yang membawa dampak positif bagi masyarakat. Dalam setiap proyek yang saya kerjakan, saya selalu berusaha memberikan yang terbaik, baik dalam hal estetika, fungsionalitas, maupun dampaknya pada orang-orang yang menggunakannya.</p>
+          <p>Jika Anda ingin tahu lebih banyak atau bekerja sama, jangan ragu untuk menghubungi saya. Mari bersama-sama menciptakan karya yang tidak hanya terlihat indah tetapi juga bermakna!</p>
+      </section>
+      
+ </section>
+
+ <section id="portofolio">
+    <h2>Portofolio</h2>
+    <p>Berikut adalah beberapa karya terbaik saya yang mencerminkan kemampuan dan dedikasi saya di dunia desain web dan pengembangan aplikasi:</p>
+    <div class="portofolio-gallery">
+        <div class="portfolio-item">
+            <img src="gambar/web.jpg" alt="Project 1">
+            <p><strong>Desain Web E-commerce</strong></p>
+            <p>Proyek ini adalah platform belanja online modern dengan desain yang elegan dan pengalaman pengguna yang responsif, dirancang untuk meningkatkan konversi dan kemudahan berbelanja.</p>
+        </div>
+        <div class="portofolio-item">
+            <img src="gambar/portfolio.jpeg" alt="Project 2">
+            <p><strong>Portofolio Pribadi</strong></p>
+            <p>Sebuah website yang saya rancang untuk menampilkan karya dan pengalaman saya secara interaktif, dengan animasi yang halus dan navigasi yang intuitif.</p>
+        </div>
+        <div class="portofolio-item">
+            <img src="gambar/proyek.png" alt="Project 3">
+            <p><strong>Aplikasi Manajemen Proyek</strong></p>
+            <p>Mengembangkan aplikasi berbasis web untuk tim kerja, memungkinkan kolaborasi yang lebih efisien dengan fitur pelacakan tugas, manajemen waktu, dan laporan terintegrasi.</p>
+        </div>
+        <div class="portofolio-item">
+            <img src="gambar/edukasi.jpeg" alt="Project 4">
+            <p><strong>Website Edukasi Online</strong></p>
+            <p>Sebuah platform pendidikan online dengan fitur kelas virtual, manajemen kursus, dan portal siswa, dirancang untuk mendukung pembelajaran jarak jauh.</p>
+        </div>
+    </div>
+</section>
+
+
+    <section id="contact">
+        <h2>Kontak Saya</h2>
+        <p> Nomber telp 089779333332 </p>
+        Instagram @dyaa._laa
+        <p>Email: <a href="mailto:putuwidyayuliastuti@gmail.com">putuwidyayuliastuti@gmail.com</a></p>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Putu Widya Yuliastuti</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
